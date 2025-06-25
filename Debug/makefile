@@ -60,8 +60,8 @@ all: main-build
 main-build: yeni_workspace_deneme.elf secondary-outputs
 
 # Tool invocations
-yeni_workspace_deneme.elf yeni_workspace_deneme.map: $(OBJS) $(USER_OBJS) /Users/bora/STM32CubeIDE/testworkspace/yeni_workspace_deneme/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "yeni_workspace_deneme.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/bora/STM32CubeIDE/testworkspace/yeni_workspace_deneme/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="yeni_workspace_deneme.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+yeni_workspace_deneme.elf yeni_workspace_deneme.map: $(OBJS) $(USER_OBJS) C:\Users\AkSaKaL\Desktop\STM32_WORKSPACE\yeni_workspace_deneme\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "yeni_workspace_deneme.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\AkSaKaL\Desktop\STM32_WORKSPACE\yeni_workspace_deneme\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="yeni_workspace_deneme.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
